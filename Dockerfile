@@ -1,3 +1,4 @@
+# Existing content of your Dockerfile
 FROM dealii/dealii:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -20,6 +21,7 @@ RUN apt-get update && \
     apt-get install -y gcc-9 g++-9 && \
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 60 && \
+    apt-get install -y paraview && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the PRISMS-Plasticity repository
