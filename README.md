@@ -2,6 +2,10 @@
 
 This project contains a Dockerfile to build a Docker image for PRISMS-Plasticity, a software package for modeling crystal plasticity.
 
+## Prerequisite
+
+Docker, Git, Paraview
+
 ## Dockerfile
 
 The Dockerfile installs the necessary dependencies, clones the PRISMS-Plasticity repository, and builds the software.
