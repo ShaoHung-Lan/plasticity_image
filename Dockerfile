@@ -1,4 +1,3 @@
-# Existing content of your Dockerfile
 FROM dealii/dealii:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -6,7 +5,7 @@ ENV PLAS_DIR=/plasticity
 
 USER root
 
-# Install dependencies including git, curl, and GCC 9
+# Install dependencies including git, curl, GCC 9, and nano
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     build-essential \
@@ -15,7 +14,9 @@ RUN apt-get update && \
     curl \
     libopenmpi-dev \
     openmpi-bin \
-    software-properties-common && \
+    software-properties-common \
+    x11-apps \
+    nano && \
     add-apt-repository ppa:ubuntu-toolchain-r/test && \
     apt-get update && \
     apt-get install -y gcc-9 g++-9 && \
@@ -44,3 +45,4 @@ RUN chown -R dealii:dealii $PLAS_DIR
 USER dealii
 
 CMD ["/bin/bash"]
+
