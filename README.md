@@ -36,6 +36,15 @@ docker load -i ~/docker_projects/plasticity_image/plasticity_image.tar
 docker run -it plasticity_image:latest
 ```
 
+## To commit and push changes to git
+```sh
+
+cd /path/to/your/repository
+git add Dockerfile README.md
+git commit -m "Updated Dockerfile and README"
+git push origin master
+```
+
 
 ## To run the program
 (should run under directory with BCinfo.txt, prm.prm,....For example: cd applications/CrystalPlasticity/fcc/compression)
