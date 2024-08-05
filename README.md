@@ -21,17 +21,22 @@ To build the Docker image, run the following command:
 
 ```sh
 docker build -t plasticity_image .
-
+```
 
 ##  To save the docker image
-
+```sh
 ./save_image.sh
+```
+
 
 ## To load and run the docker image
-
+```sh
 ./load_image.sh
+```
 
 
 ## To run the program
 (should run under directory with BCinfo.txt, prm.prm,....For example: cd applications/CrystalPlasticity/fcc/compression)
+```sh
 mpirun -n 4 ../../main prm.prm
+```
