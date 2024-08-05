@@ -25,10 +25,13 @@ docker build -t plasticity_image .
 
 ##  To save the docker image
 
-bash
 ./save_image.sh
 
 ## To load and run the docker image
 
-bash
 ./load_image.sh
+
+
+## To run the program
+(should run under directory with BCinfo.txt, prm.prm,....For example: cd applications/CrystalPlasticity/fcc/compression)
+mpirun -n 4 ../../main prm.prm
