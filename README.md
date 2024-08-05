@@ -43,10 +43,10 @@ docker run -it plasticity_image:latest
 ## To commit and push changes to git
 ```sh
 
-cd /path/to/your/repository
-git add Dockerfile README.md
-git commit -m "Updated Dockerfile and README"
-git push origin master
+git add README.md
+git commit -m "Update README.md with project details"
+git push gitlab master
+
 ```
 
 
