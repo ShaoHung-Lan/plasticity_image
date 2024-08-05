@@ -12,7 +12,6 @@ The Dockerfile installs the necessary dependencies, clones the PRISMS-Plasticity
 - GCC 9
 - OpenMPI
 - CMake
-- ParaView
 - Nano
 
 ## Building the Docker Image
@@ -23,15 +22,18 @@ To build the Docker image, run the following command:
 docker build -t plasticity_image .
 ```
 
-##  To save the docker image
+##  To build and save the docker image
 ```sh
-./save_image.sh
+docker build -t plasticity_image .
+docker save -o ~/docker_projects/plasticity_image/plasticity_image.tar plasticity_image:latest
+echo "Docker image saved as plasticity_image.tar"
 ```
 
 
 ## To load and run the docker image
 ```sh
-./load_image.sh
+docker load -i ~/docker_projects/plasticity_image/plasticity_image.tar
+docker run -it plasticity_image:latest
 ```
 
 

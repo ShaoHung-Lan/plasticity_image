@@ -15,14 +15,12 @@ RUN apt-get update && \
     libopenmpi-dev \
     openmpi-bin \
     software-properties-common \
-    x11-apps \
     nano && \
     add-apt-repository ppa:ubuntu-toolchain-r/test && \
     apt-get update && \
     apt-get install -y gcc-9 g++-9 && \
     update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 && \
     update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 60 && \
-    apt-get install -y paraview && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the PRISMS-Plasticity repository
